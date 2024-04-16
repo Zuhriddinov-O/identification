@@ -33,8 +33,8 @@ class _InfoPageState extends State<InfoPage> {
                     : Center(
                         child: Image.file(
                           widget.identify.image ?? File(""),
-                          width: MediaQuery.of(context).size.width * 0.04,
-                          height: MediaQuery.of(context).size.height * 0.04,
+                          width: MediaQuery.of(context).size.width * 0.45,
+                          height: MediaQuery.of(context).size.height * 0.45,
                           fit: BoxFit.fill,
                           filterQuality: FilterQuality.high,
                         ),
@@ -47,11 +47,11 @@ class _InfoPageState extends State<InfoPage> {
                         decoration: const BoxDecoration(color: CupertinoColors.white),
                         children: [
                           const TableCell(
-                            child:
-                                Padding(
-                                  padding: EdgeInsets.only(left: 3),
-                                  child: Text("Familiyasi", style: TextStyle(color: CupertinoColors.black)),
-                                ),
+                            child: Padding(
+                              padding: EdgeInsets.only(left: 3),
+                              child: Text("Familiyasi",
+                                  style: TextStyle(color: CupertinoColors.black)),
+                            ),
                           ),
                           TableCell(
                             child: Padding(
@@ -82,11 +82,10 @@ class _InfoPageState extends State<InfoPage> {
                         decoration: const BoxDecoration(color: CupertinoColors.white),
                         children: [
                           const TableCell(
-                              child:
-                                  Padding(
-                                    padding: EdgeInsets.only(left: 3.0),
-                                    child: Text("Sharifi", style: TextStyle(color: CupertinoColors.black)),
-                                  )),
+                              child: Padding(
+                            padding: EdgeInsets.only(left: 3.0),
+                            child: Text("Sharifi", style: TextStyle(color: CupertinoColors.black)),
+                          )),
                           TableCell(
                             child: Padding(
                               padding: const EdgeInsets.only(left: 2.0),
@@ -100,10 +99,10 @@ class _InfoPageState extends State<InfoPage> {
                         children: [
                           const TableCell(
                               child: Padding(
-                                padding: EdgeInsets.only(left: 3.0),
-                                child: Text("Ilmiy Darajasi",
-                                    style: TextStyle(color: CupertinoColors.black)),
-                              )),
+                            padding: EdgeInsets.only(left: 3.0),
+                            child: Text("Ilmiy Darajasi",
+                                style: TextStyle(color: CupertinoColors.black)),
+                          )),
                           TableCell(
                             child: Padding(
                               padding: const EdgeInsets.only(left: 2.0),
@@ -117,10 +116,10 @@ class _InfoPageState extends State<InfoPage> {
                         children: [
                           const TableCell(
                               child: Padding(
-                                padding: EdgeInsets.only(left: 3.0),
-                                child: Text("Telefon Raqami",
-                                    style: TextStyle(color: CupertinoColors.black)),
-                              )),
+                            padding: EdgeInsets.only(left: 3.0),
+                            child: Text("Telefon Raqami",
+                                style: TextStyle(color: CupertinoColors.black)),
+                          )),
                           TableCell(
                             child: Padding(
                               padding: const EdgeInsets.only(left: 2.0),
@@ -134,10 +133,10 @@ class _InfoPageState extends State<InfoPage> {
                         children: [
                           const TableCell(
                               child: Padding(
-                                padding: EdgeInsets.only(left: 3.0),
-                                child: Text("Elektron Pochtasi",
-                                    style: TextStyle(color: CupertinoColors.black)),
-                              )),
+                            padding: EdgeInsets.only(left: 3.0),
+                            child: Text("Elektron Pochtasi",
+                                style: TextStyle(color: CupertinoColors.black)),
+                          )),
                           TableCell(
                             child: Padding(
                               padding: const EdgeInsets.only(left: 2.0),
