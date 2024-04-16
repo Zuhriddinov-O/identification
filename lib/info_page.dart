@@ -49,6 +49,24 @@ class _InfoPageState extends State<InfoPage> {
                           const TableCell(
                             child: Padding(
                               padding: EdgeInsets.only(left: 3),
+                              child:
+                                  Text("Lavozimi", style: TextStyle(color: CupertinoColors.black)),
+                            ),
+                          ),
+                          TableCell(
+                            child: Padding(
+                              padding: const EdgeInsets.only(left: 2.0),
+                              child: Text(widget.identify.position ?? "",
+                                  style: const TextStyle(color: CupertinoColors.black)),
+                            ),
+                          ),
+                        ]),
+                    TableRow(
+                        decoration: const BoxDecoration(color: CupertinoColors.white),
+                        children: [
+                          const TableCell(
+                            child: Padding(
+                              padding: EdgeInsets.only(left: 3),
                               child: Text("Familiyasi",
                                   style: TextStyle(color: CupertinoColors.black)),
                             ),

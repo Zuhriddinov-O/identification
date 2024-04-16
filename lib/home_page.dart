@@ -56,13 +56,8 @@ class _HomePageState extends State<HomePage> {
             child: SizedBox(
               height: height * 0.06,
               child: CupertinoTextField(
-                onSubmitted: (value) {
-                  positionText = value;
-                  print(positionText);
-                },
                 onChanged: (value) {
                   positionText = value;
-                  print(positionText);
                 },
                 controller: position,
                 textCapitalization: TextCapitalization.words,
@@ -79,10 +74,6 @@ class _HomePageState extends State<HomePage> {
             child: SizedBox(
               height: height * 0.06,
               child: CupertinoTextField(
-                onSubmitted: (value) {
-                  surNameText = value;
-                  print(surNameText);
-                },
                 onChanged: (value) {
                   surNameText = value;
                   print(surNameText);
@@ -94,18 +85,13 @@ class _HomePageState extends State<HomePage> {
           ),
           Padding(
             padding: EdgeInsets.only(left: width * 0.05, right: width * 0.05, top: 5),
-            child:
-                const Text("Ism_", style: TextStyle(color: CupertinoColors.white, fontSize: 17)),
+            child: const Text("Ism_", style: TextStyle(color: CupertinoColors.white, fontSize: 17)),
           ),
           Padding(
             padding: EdgeInsets.symmetric(horizontal: width * 0.05, vertical: 2),
             child: SizedBox(
               height: height * 0.06,
               child: CupertinoTextField(
-                onSubmitted: (value) {
-                  nameText = value;
-                  print(nameText);
-                },
                 onChanged: (value) {
                   nameText = value;
                   print(nameText);
@@ -125,10 +111,6 @@ class _HomePageState extends State<HomePage> {
             child: SizedBox(
               height: height * 0.06,
               child: CupertinoTextField(
-                onSubmitted: (value) {
-                  parentalNameText = value;
-                  print(parentalNameText);
-                },
                 onChanged: (value) {
                   parentalNameText = value;
                   print(parentalNameText);
@@ -148,10 +130,6 @@ class _HomePageState extends State<HomePage> {
             child: SizedBox(
               height: height * 0.06,
               child: CupertinoTextField(
-                onSubmitted: (value) {
-                  eduPositionText = value;
-                  print(eduPositionText);
-                },
                 onChanged: (value) {
                   eduPositionText = value;
                   print(eduPositionText);
@@ -171,10 +149,6 @@ class _HomePageState extends State<HomePage> {
             child: SizedBox(
               height: height * 0.06,
               child: CupertinoTextField(
-                onSubmitted: (value) {
-                  phoneNumberText = value;
-                  print(phoneNumberText);
-                },
                 onChanged: (value) {
                   phoneNumberText = value;
                   print(phoneNumberText);
@@ -194,10 +168,6 @@ class _HomePageState extends State<HomePage> {
             child: SizedBox(
               height: height * 0.06,
               child: CupertinoTextField(
-                onSubmitted: (value) {
-                  emailText = value;
-                  print(emailText);
-                },
                 onChanged: (value) {
                   emailText = value;
                   print(emailText);
@@ -217,10 +187,6 @@ class _HomePageState extends State<HomePage> {
             child: SizedBox(
               height: height * 0.06,
               child: CupertinoTextField(
-                onSubmitted: (value) {
-                  approvalDaysText = value;
-                  print(approvalDaysText);
-                },
                 onChanged: (value) {
                   approvalDaysText = value;
                   print(approvalDaysText);
