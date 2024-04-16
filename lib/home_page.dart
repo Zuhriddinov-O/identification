@@ -48,7 +48,7 @@ class _HomePageState extends State<HomePage> {
         children: [
           Padding(
             padding: EdgeInsets.only(left: width * 0.05, right: width * 0.05, top: 10),
-            child: const Text("Lavozimi...",
+            child: const Text("Lavozimi_",
                 style: TextStyle(color: CupertinoColors.white, fontSize: 17)),
           ),
           Padding(
@@ -71,7 +71,7 @@ class _HomePageState extends State<HomePage> {
           ),
           Padding(
             padding: EdgeInsets.only(left: width * 0.05, right: width * 0.05, top: 5),
-            child: const Text("Familiya...",
+            child: const Text("Familiya_",
                 style: TextStyle(color: CupertinoColors.white, fontSize: 17)),
           ),
           Padding(
@@ -95,7 +95,7 @@ class _HomePageState extends State<HomePage> {
           Padding(
             padding: EdgeInsets.only(left: width * 0.05, right: width * 0.05, top: 5),
             child:
-                const Text("Ism...", style: TextStyle(color: CupertinoColors.white, fontSize: 17)),
+                const Text("Ism_", style: TextStyle(color: CupertinoColors.white, fontSize: 17)),
           ),
           Padding(
             padding: EdgeInsets.symmetric(horizontal: width * 0.05, vertical: 2),
@@ -117,7 +117,7 @@ class _HomePageState extends State<HomePage> {
           ),
           Padding(
             padding: EdgeInsets.only(left: width * 0.05, right: width * 0.05, top: 5),
-            child: const Text("Sharifi...",
+            child: const Text("Sharifi_",
                 style: TextStyle(color: CupertinoColors.white, fontSize: 17)),
           ),
           Padding(
@@ -140,7 +140,7 @@ class _HomePageState extends State<HomePage> {
           ),
           Padding(
             padding: EdgeInsets.only(left: width * 0.05, right: width * 0.05, top: 5),
-            child: const Text("Ilmiy darajasi...",
+            child: const Text("Ilmiy darajasi_",
                 style: TextStyle(color: CupertinoColors.white, fontSize: 17)),
           ),
           Padding(
@@ -163,7 +163,7 @@ class _HomePageState extends State<HomePage> {
           ),
           Padding(
             padding: EdgeInsets.only(left: width * 0.05, right: width * 0.05, top: 5),
-            child: const Text("Telefon raqami...",
+            child: const Text("Telefon raqami_",
                 style: TextStyle(color: CupertinoColors.white, fontSize: 17)),
           ),
           Padding(
@@ -186,7 +186,7 @@ class _HomePageState extends State<HomePage> {
           ),
           Padding(
             padding: EdgeInsets.only(left: width * 0.05, right: width * 0.05, top: 5),
-            child: const Text("Elektron pochtasi...",
+            child: const Text("Elektron pochtasi_",
                 style: TextStyle(color: CupertinoColors.white, fontSize: 17)),
           ),
           Padding(
@@ -209,7 +209,7 @@ class _HomePageState extends State<HomePage> {
           ),
           Padding(
             padding: EdgeInsets.only(left: width * 0.05, right: width * 0.05, top: 5),
-            child: const Text("Qabul kunlari...",
+            child: const Text("Qabul kunlari_",
                 style: TextStyle(color: CupertinoColors.white, fontSize: 17)),
           ),
           Padding(

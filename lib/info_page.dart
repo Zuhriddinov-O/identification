@@ -1,9 +1,7 @@
 import 'dart:io';
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:gap/gap.dart';
 import 'package:identify/class.dart';
 
@@ -50,22 +48,34 @@ class _InfoPageState extends State<InfoPage> {
                         children: [
                           const TableCell(
                             child:
-                                Text("Familiyasi", style: TextStyle(color: CupertinoColors.black)),
+                                Padding(
+                                  padding: EdgeInsets.only(left: 3),
+                                  child: Text("Familiyasi", style: TextStyle(color: CupertinoColors.black)),
+                                ),
                           ),
                           TableCell(
-                            child: Text(widget.identify.surname ?? "",
-                                style: const TextStyle(color: CupertinoColors.black)),
+                            child: Padding(
+                              padding: const EdgeInsets.only(left: 2.0),
+                              child: Text(widget.identify.surname ?? "",
+                                  style: const TextStyle(color: CupertinoColors.black)),
+                            ),
                           ),
                         ]),
                     TableRow(
                         decoration: const BoxDecoration(color: CupertinoColors.white),
                         children: [
                           const TableCell(
-                            child: Text("Ismi", style: TextStyle(color: CupertinoColors.black)),
+                            child: Padding(
+                              padding: EdgeInsets.only(left: 3.0),
+                              child: Text("Ismi", style: TextStyle(color: CupertinoColors.black)),
+                            ),
                           ),
                           TableCell(
-                            child: Text(widget.identify.name ?? "",
-                                style: const TextStyle(color: CupertinoColors.black)),
+                            child: Padding(
+                              padding: const EdgeInsets.only(left: 2.0),
+                              child: Text(widget.identify.name ?? "",
+                                  style: const TextStyle(color: CupertinoColors.black)),
+                            ),
                           ),
                         ]),
                     TableRow(
@@ -73,55 +83,85 @@ class _InfoPageState extends State<InfoPage> {
                         children: [
                           const TableCell(
                               child:
-                                  Text("Sharifi", style: TextStyle(color: CupertinoColors.black))),
+                                  Padding(
+                                    padding: EdgeInsets.only(left: 3.0),
+                                    child: Text("Sharifi", style: TextStyle(color: CupertinoColors.black)),
+                                  )),
                           TableCell(
-                            child: Text(widget.identify.parentalName ?? "",
-                                style: const TextStyle(color: CupertinoColors.black)),
+                            child: Padding(
+                              padding: const EdgeInsets.only(left: 2.0),
+                              child: Text(widget.identify.parentalName ?? "",
+                                  style: const TextStyle(color: CupertinoColors.black)),
+                            ),
                           ),
                         ]),
                     TableRow(
                         decoration: const BoxDecoration(color: CupertinoColors.white),
                         children: [
                           const TableCell(
-                              child: Text("Ilmiy Darajasi",
-                                  style: TextStyle(color: CupertinoColors.black))),
+                              child: Padding(
+                                padding: EdgeInsets.only(left: 3.0),
+                                child: Text("Ilmiy Darajasi",
+                                    style: TextStyle(color: CupertinoColors.black)),
+                              )),
                           TableCell(
-                            child: Text(widget.identify.eduPosition ?? "",
-                                style: const TextStyle(color: CupertinoColors.black)),
+                            child: Padding(
+                              padding: const EdgeInsets.only(left: 2.0),
+                              child: Text(widget.identify.eduPosition ?? "",
+                                  style: const TextStyle(color: CupertinoColors.black)),
+                            ),
                           ),
                         ]),
                     TableRow(
                         decoration: const BoxDecoration(color: CupertinoColors.white),
                         children: [
                           const TableCell(
-                              child: Text("Telefon Raqami",
-                                  style: TextStyle(color: CupertinoColors.black))),
+                              child: Padding(
+                                padding: EdgeInsets.only(left: 3.0),
+                                child: Text("Telefon Raqami",
+                                    style: TextStyle(color: CupertinoColors.black)),
+                              )),
                           TableCell(
-                            child: Text(widget.identify.phoneNumber ?? "",
-                                style: const TextStyle(color: CupertinoColors.black)),
+                            child: Padding(
+                              padding: const EdgeInsets.only(left: 2.0),
+                              child: Text(widget.identify.phoneNumber ?? "",
+                                  style: const TextStyle(color: CupertinoColors.black)),
+                            ),
                           ),
                         ]),
                     TableRow(
                         decoration: const BoxDecoration(color: CupertinoColors.white),
                         children: [
                           const TableCell(
-                              child: Text("Elektron Pochtasi",
-                                  style: TextStyle(color: CupertinoColors.black))),
+                              child: Padding(
+                                padding: EdgeInsets.only(left: 3.0),
+                                child: Text("Elektron Pochtasi",
+                                    style: TextStyle(color: CupertinoColors.black)),
+                              )),
                           TableCell(
-                            child: Text(widget.identify.email ?? "",
-                                style: const TextStyle(color: CupertinoColors.black)),
+                            child: Padding(
+                              padding: const EdgeInsets.only(left: 2.0),
+                              child: Text(widget.identify.email ?? "",
+                                  style: const TextStyle(color: CupertinoColors.black)),
+                            ),
                           ),
                         ]),
                     TableRow(
                         decoration: const BoxDecoration(color: CupertinoColors.white),
                         children: [
                           const TableCell(
-                            child: Text("Qabul Kunlari",
-                                style: TextStyle(color: CupertinoColors.black)),
+                            child: Padding(
+                              padding: EdgeInsets.only(left: 3.0),
+                              child: Text("Qabul Kunlari",
+                                  style: TextStyle(color: CupertinoColors.black)),
+                            ),
                           ),
                           TableCell(
-                            child: Text(widget.identify.approvalDays ?? "",
-                                style: const TextStyle(color: CupertinoColors.black)),
+                            child: Padding(
+                              padding: const EdgeInsets.only(left: 2.0),
+                              child: Text(widget.identify.approvalDays ?? "",
+                                  style: const TextStyle(color: CupertinoColors.black)),
+                            ),
                           ),
                         ]),
                   ],
