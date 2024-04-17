@@ -30,15 +30,24 @@ class _InfoPageState extends State<InfoPage> {
               children: [
                 kIsWeb
                     ? Center(child: FlutterLogo(size: MediaQuery.of(context).size.width * 0.45))
-                    : Center(
-                        child: Image.file(
-                          widget.identify.image ?? File(""),
-                          width: MediaQuery.of(context).size.width * 0.45,
-                          height: MediaQuery.of(context).size.height * 0.45,
-                          fit: BoxFit.fill,
-                          filterQuality: FilterQuality.high,
-                        ),
-                      ),
+                    : widget.identify.image != null
+                        ? Center(
+                            child: Image.file(
+                              widget.identify.image ?? File(""),
+                              width: MediaQuery.of(context).size.width * 0.45,
+                              height: MediaQuery.of(context).size.height * 0.45,
+                              fit: BoxFit.fill,
+                              filterQuality: FilterQuality.high,
+                            ),
+                          )
+                        : Padding(
+                            padding: EdgeInsets.symmetric(
+                                horizontal: MediaQuery.of(context).size.width * 0.05),
+                            child: const Text(
+                              "shaxsiy rasmingiz joylashtirilmadi",
+                              style: TextStyle(color: CupertinoColors.white),
+                            ),
+                          ),
                 const Gap(10),
                 Table(
                   border: TableBorder.all(width: 2, color: CupertinoColors.systemGrey),

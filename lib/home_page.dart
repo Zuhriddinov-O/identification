@@ -196,12 +196,6 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
           ),
-          // _selectedImage != null
-          //     ? Image.file(_selectedImage!)
-          //     : Padding(
-          //   padding: EdgeInsets.symmetric(horizontal: width * 0.05),
-          //   child: const Text("shaxsiy rasmingiz joylashtirilmadi",style: TextStyle(color: CupertinoColors.white),),
-          // ),
           Padding(
             padding: EdgeInsets.symmetric(horizontal: width * 0.05, vertical: height * 0.01),
             child: ElevatedButton(
@@ -213,7 +207,6 @@ class _HomePageState extends State<HomePage> {
                         borderRadius: BorderRadius.all(Radius.circular(5))))),
                 child: const Text("Rasm olish")),
           ),
-
           Padding(
             padding:
                 EdgeInsets.only(left: width * 0.05, right: width * 0.05, bottom: height * 0.01),
@@ -240,7 +233,7 @@ class _HomePageState extends State<HomePage> {
                               approvalDays: approvalDaysText,
                               position: positionText,
                               eduPosition: eduPositionText,
-                              image: kIsWeb ? null : _selectedImage),
+                              image: _selectedImage),
                         ),
                       ),
                     );
@@ -258,8 +251,10 @@ class _HomePageState extends State<HomePage> {
 
   Future _gallery() async {
     final returnImage = ImagePicker().pickImage(source: ImageSource.gallery);
-    setState(() {
-      _selectedImage = File(returnImage.toString());
-    });
+    if (returnImage != null) {
+      setState(() {
+        _selectedImage = File(returnImage.toString());
+      });
+    }
   }
 }
