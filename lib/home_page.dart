@@ -217,13 +217,13 @@ class _HomePageState extends State<HomePage> {
                 EdgeInsets.only(left: width * 0.05, right: width * 0.05, bottom: height * 0.01),
             child: ElevatedButton(
                 onPressed: () {
-                  if (nameText.isNotEmpty == true ||
-                      surNameText.isNotEmpty == true ||
-                      parentalNameText.isNotEmpty == true ||
-                      phoneNumberText.isNotEmpty == true ||
-                      emailText.isNotEmpty == true ||
-                      approvalDaysText.isNotEmpty == true ||
-                      positionText.isNotEmpty == true ||
+                  if (nameText.isNotEmpty == true &&
+                      surNameText.isNotEmpty == true &&
+                      parentalNameText.isNotEmpty == true &&
+                      phoneNumberText.isNotEmpty == true &&
+                      emailText.isNotEmpty == true &&
+                      approvalDaysText.isNotEmpty == true &&
+                      positionText.isNotEmpty == true &&
                       eduPositionText.isNotEmpty == true) {
                     correct = true;
                     Navigator.of(context).push(
