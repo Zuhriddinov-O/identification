@@ -13,7 +13,7 @@ class Main extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(useMaterial3: true),
-      home: HomePage(),
+      home: const HomePage(),
     );
   }
 }
