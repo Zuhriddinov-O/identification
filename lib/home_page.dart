@@ -16,31 +16,30 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   bool correct = false;
-  File? _selectedImage;
+  XFile? _xFile;
+
+  var name = TextEditingController();
+  var surName = TextEditingController();
+  var parentalName = TextEditingController();
+  var phoneNumber = TextEditingController();
+  var email = TextEditingController();
+  var approvalDays = TextEditingController();
+  var position = TextEditingController();
+  var eduPosition = TextEditingController();
+
+  String nameText = "";
+  String surNameText = "";
+  String parentalNameText = "";
+  String phoneNumberText = "";
+  String emailText = "";
+  String approvalDaysText = "";
+  String positionText = "";
+  String eduPositionText = "";
 
   @override
   Widget build(BuildContext context) {
-    var name = TextEditingController();
-    var surName = TextEditingController();
-    var parentalName = TextEditingController();
-    var phoneNumber = TextEditingController();
-    var email = TextEditingController();
-    var approvalDays = TextEditingController();
-    var position = TextEditingController();
-    var eduPosition = TextEditingController();
-
     var width = MediaQuery.of(context).size.width;
     var height = MediaQuery.of(context).size.height;
-
-    String nameText = "";
-    String surNameText = "";
-    String parentalNameText = "";
-    String phoneNumberText = "";
-    String emailText = "";
-    String approvalDaysText = "";
-    String positionText = "";
-    String eduPositionText = "";
-
     return Scaffold(
       backgroundColor: Color(0xff333355),
       appBar: AppBar(centerTitle: true, title: const Text("My Client")),
@@ -196,6 +195,12 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
           ),
+          if (_xFile != null)
+            Padding(
+              padding: const EdgeInsets.all(20.0),
+              child: ClipRRect(borderRadius: BorderRadius.circular(15),
+                  child: Image.file(File(_xFile?.path ?? ""), height: height * 0.5, width: width,fit: BoxFit.fill,filterQuality: FilterQuality.high)),
+            ),
           Padding(
             padding: EdgeInsets.symmetric(horizontal: width * 0.05, vertical: height * 0.01),
             child: ElevatedButton(
@@ -212,13 +217,13 @@ class _HomePageState extends State<HomePage> {
                 EdgeInsets.only(left: width * 0.05, right: width * 0.05, bottom: height * 0.01),
             child: ElevatedButton(
                 onPressed: () {
-                  if (nameText.isNotEmpty == true &&
-                      surNameText.isNotEmpty == true &&
-                      parentalNameText.isNotEmpty == true &&
-                      phoneNumberText.isNotEmpty == true &&
-                      emailText.isNotEmpty == true &&
-                      approvalDaysText.isNotEmpty == true &&
-                      positionText.isNotEmpty == true &&
+                  if (nameText.isNotEmpty == true ||
+                      surNameText.isNotEmpty == true ||
+                      parentalNameText.isNotEmpty == true ||
+                      phoneNumberText.isNotEmpty == true ||
+                      emailText.isNotEmpty == true ||
+                      approvalDaysText.isNotEmpty == true ||
+                      positionText.isNotEmpty == true ||
                       eduPositionText.isNotEmpty == true) {
                     correct = true;
                     Navigator.of(context).push(
@@ -233,7 +238,7 @@ class _HomePageState extends State<HomePage> {
                               approvalDays: approvalDaysText,
                               position: positionText,
                               eduPosition: eduPositionText,
-                              image: _selectedImage),
+                              image: _xFile?.path),
                         ),
                       ),
                     );
@@ -250,10 +255,10 @@ class _HomePageState extends State<HomePage> {
   }
 
   Future _gallery() async {
-    final returnImage = ImagePicker().pickImage(source: ImageSource.gallery);
+    final returnImage = await ImagePicker().pickImage(source: ImageSource.gallery);
     if (returnImage != null) {
       setState(() {
-        _selectedImage = File(returnImage.toString());
+        _xFile = returnImage;
       });
     }
   }

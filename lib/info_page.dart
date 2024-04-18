@@ -22,22 +22,26 @@ class _InfoPageState extends State<InfoPage> {
       appBar: AppBar(centerTitle: true, title: const Text("My Client")),
       body: Center(
         child: Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding: const EdgeInsets.symmetric(horizontal: 8),
           child: SingleChildScrollView(
             child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 kIsWeb
                     ? Center(child: FlutterLogo(size: MediaQuery.of(context).size.width * 0.45))
                     : widget.identify.image != null
                         ? Center(
-                            child: Image.file(
-                              widget.identify.image ?? File(""),
-                              width: MediaQuery.of(context).size.width * 0.45,
-                              height: MediaQuery.of(context).size.height * 0.45,
-                              fit: BoxFit.fill,
-                              filterQuality: FilterQuality.high,
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(12),
+                              child: Image.file(
+                                excludeFromSemantics: true,
+                                gaplessPlayback: true,
+                                File(widget.identify.image ?? ""),
+                                width: MediaQuery.of(context).size.width,
+                                height: MediaQuery.of(context).size.height * 0.5,
+                                fit: BoxFit.fill,
+                                filterQuality: FilterQuality.high,
+                              ),
                             ),
                           )
                         : Padding(
@@ -48,7 +52,7 @@ class _InfoPageState extends State<InfoPage> {
                               style: TextStyle(color: CupertinoColors.white),
                             ),
                           ),
-                const Gap(10),
+                const Gap(25),
                 Table(
                   border: TableBorder.all(width: 2, color: CupertinoColors.systemGrey),
                   children: [

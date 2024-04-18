@@ -1,7 +1,3 @@
-
-
-import 'dart:io';
-
 class Identify {
   int? id;
   String? name;
@@ -12,7 +8,7 @@ class Identify {
   String? approvalDays;
   String? position;
   String? eduPosition;
-  File? image;
+  String? image;
 
   Identify({
     this.id,
