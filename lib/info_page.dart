@@ -31,7 +31,7 @@ class _InfoPageState extends State<InfoPage> {
                     ? Center(child: FlutterLogo(size: MediaQuery.of(context).size.width * 0.45))
                     : widget.identify.image != null
                         ? Center(
-                            child: ClipRRect(
+                            cgihild: ClipRRect(
                               borderRadius: BorderRadius.circular(12),
                               child: Image.file(
                                 excludeFromSemantics: true,
